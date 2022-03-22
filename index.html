@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Retrival Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="icon">
+            <div class="line"></div>
+        </div>
+        <div class="sideopt">
+            <h1 class="head side">Boolean Retrival</h1>
+            <div class="option side active" onclick="openWindow(this, 'Intro')">Introduction</div>
+            <div class="option side" onclick="openWindow(this, 'Viz')">Visualization</div>
+            <!--         <div class="option side" onclick="openWindow(this, 'Beast')">Beast Mode</div> -->
+        </div>
+    </div>
+    <section id="Intro" class="mainWindow">
+        <div class="header">
+            <h1 class="heading">Boolean Retrival Introduction</h1>
+            <h1 class="heading small">Introduction</h1>
+        </div>
+        <div class="main">
+            <h1 class="mainHead">Boolean Retrival</h1>
+            <div class="information">
+                The (standard) Boolean model of information retrieval (BIR) is a classical information retrieval (IR) model and, at the same time, the first and most-adopted one. It is used by many IR systems to this day. The BIR is based on Boolean logic and classical set theory in that both the documents to be searched and the user's query are conceived as sets of terms (a bag-of-words model). Retrieval is based on whether or not the documents contain the query terms.
+                <div class="information">
+                    In Boolean retrieval model, there are some logical operators we are using like AND, OR, NOT. Using these operators, we write a query using keywords with which we search or retrieve required documents.
+                    BY using this website, we can retrieve the needed documents from provided documents using keywords written in query format. Query can be written similarly like (abcdef AND ghijkl OR mnopqr NOT stuvwx). We need to upload the documents from which we need to retrieve our needed documents using drag or upload options. Using this query, our model in this website will retrieve the required documents and display.
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="Viz" style="display:none" class="mainWindow">
+    
+        <div class="header">
+            <h1 class="heading">Boolean Retrival Visualization</h1>
+            <h1 class="heading small">Visualization</h1>
+            <ul>
+                <li class="headopt active" onclick="openTab(this, 'files')">Files</li>
+                <li class="headopt" onclick="openTab(this, 'viz')">Viz</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div id="files" class="mainbody">
+    
+                <h2>File Upload</h2>
+    
+                <p>Either upload or create a file</p>
+                <button class="upload" id="ubut" onclick="DisplayDrag()">Upload</button>
+                <div class="drag-container" style="display:none">
+                    <div class="drag-area">
+                        <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <h1 class="heading">Drag & Drop to Upload Files</h1>
+                        <h1 class="heading small">Drag & Drop</h1>
+                        <span>OR</span>
+                        <button>Browse File</button>
+                        <input type="file" hidden>
+                    </div>
+                </div>
+                <div class="filesys">
+    
+                </div>
+            </div>
+    
+            <div id="viz" class="mainbody" style="display:none">
+                <div id="searchContainer" style="text-align:center">
+                    <input type="text" placeholder="Query" id="search" name="search">
+                    <button type="button" id="sbut">Search</i></button>
+                </div>
+                <div class="displayresult"></div>
+            </div>
+        </div>
+    </section>
+    <section id="Beast" class="mainWindow" style="display:none">
+        <div class="header">
+            <h1 class="heading">Boolean Retrival Use Mode</h1>
+            <h1 class="heading small">Beast Mode</h1>
+        </div>
+        <div class="main">
+            <h1 class="mainHead">Under Construction</h1>
+            <div class="information">
+                This will contain simple general purpose search engine for text files using boolean retrival
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

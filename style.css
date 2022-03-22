@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&family=Ubuntu+Mono&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Mono", monospace;
+}
+.sidebar {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    background: white;
+    height: 100vh;
+    width: max(4vw, 50px);
+    transition: all 0.5s ease-in-out;
+}
+body {
+    padding-left: max(5vw, 60px);
+    background: hsl(127, 0%, 91%);
+    height: 100vh;
+    font-size: 1.5rem;
+}
+body .heading.heading {
+    text-align: left;
+    font-family: "JetBrains Mono", monospace;
+}
+.sidebar .icon .line {
+    margin-top: 3px;
+    height: 24px;
+    width: 24px;
+    background-image: url(https://img.icons8.com/material-outlined/24/000000/menu--v1.png);
+    float: right;
+}
+.sidebar.expand {
+    width: 300px;
+}
+.sidebar.expand .icon .line {
+    background-image: url(https://img.icons8.com/material-outlined/24/000000/multiply--v1.png);
+}
+.sideopt {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+.sidebar .optvisible {
+    opacity: 1;
+    display: block;
+}
+
+.sidebar .option {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid red;
+    cursor: pointer;
+}
+.sidebar .option.active {
+    background: hsl(0, 50%, 90%);
+    color: hsl(500, 50%, 40%);
+}
+.heading.small {
+    display: none;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}
+.header ul {
+    display: flex;
+    justify-content: space-between;
+}
+.header ul li {
+    width: 60px;
+    padding: 10px;
+    list-style: none;
+    align-self: center;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+.header ul li.active {
+    background: hsl(0, 50%, 90%);
+    color: hsl(500, 50%, 40%);
+}
+
+/* Drag and Drop Styles Start */
+#files {
+    padding: 10px;
+    height: 100vh;
+    text-align: center;
+}
+.drag-container {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(134, 124, 124, 0.5);
+}
+.drag-area {
+    margin: 5% auto;
+    border: 2px dashed #fff;
+    height: 70%;
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: hsl(300, 30%, 60%);
+}
+.drag-area.active {
+    border: 2px solid #fff;
+}
+.drag-area .icon {
+    font-size: 100px;
+    color: #fff;
+}
+.drag-area .heading {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.drag-area span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.filesys {
+    height: 100%;
+}
+.filesys div {
+    display: inline-block;
+    background: hsl(234, 40%, 60%);
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.mainWindow {
+    height: 100vh;
+}
+/* Drag and Drop Styles End */
+
+/* Breakpoint Start */
+@media only screen and (max-width: 700px) {
+    .heading {
+        display: none;
+    }
+    .heading.small {
+        display: block;
+    }
+}
+/* Breakpoint End */
+
+/* VizTabStyles Start*/
+#searchContainer #search {
+    margin: 10px;
+    font-size: 1rem;
+    padding: 10px;
+}
+#searchContainer #search {
+    margin: 10px;
+    font-size: 1rem;
+    padding: 10px;
+}
+#searchContainer #sbut {
+    padding: 10px;
+}
+#files #ubut {
+    padding: 10px;
+}
+.displayresult {
+    height: 100%;
+    text-align: center;
+}
+.displayresult div {
+    text-align: center;
+    display: inline-block;
+    background: hsl(234, 40%, 60%);
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* VizTabStyles End*/
+#Intro .information {
+    text-justify: inter-word;
+    padding-top: 10px;
+    line-height: 30px;
+}
